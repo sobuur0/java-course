@@ -3,6 +3,8 @@
 import java.util.Scanner;  // Needed for the Scanner class to read input
 
 public class custom_order {
+    int totalCost;
+    String addOnList;
 
     // STEP 1 PRINTING HELLO WORLD TO CONSOLE
     public static void main(String[] args) {
@@ -19,6 +21,7 @@ public class custom_order {
 	  String fillingType;
 	  String toppings;
 	  String input;
+
 
 	  double cost = 15.00;
 	  final double TAX_RATE = 0.08;
@@ -114,9 +117,24 @@ public class custom_order {
       
     // STEP 10 DISPLAY COST AND SALES TAX
 
+
+
         System.out.printf("The cost of your order is: $%.2f\n", cost);
         tax = cost * TAX_RATE;
         System.out.printf("The tax is: $%.2f\n", tax);
         System.out.printf("The total due is: $%.2f\n",(tax + cost));
-    }   
+
+    }
+
+    /*public static void addItem(String item, int cost) {
+        totalCost+=cost;
+        addOnList+=item;
+    }
+
+    if (frostingType != "no") {
+        addItem(frostingType,2);
+        addOnList+=", ";
+    }
+
+     */
 }
